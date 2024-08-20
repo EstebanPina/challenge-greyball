@@ -23,8 +23,8 @@ export const cartReducer = (state = initialState, action: CartActionTypes): Cart
       }
 
     case REMOVE_FROM_CART:
-      const filteredItems = state.items.filter(item => item.Id !== action.payload.id);
-      const removedItem = state.items.find(item => item.Id === action.payload.id);
+      const filteredItems = state.items.filter(item => item.Id !== action.payload.Id);
+      const removedItem = state.items.find(item => item.Id === action.payload.Id);
       const reducedAmount = removedItem ? removedItem.Price * removedItem.Quantity : 0;
 
       return {
@@ -33,11 +33,11 @@ export const cartReducer = (state = initialState, action: CartActionTypes): Cart
       };
 
     case UPDATE_CART_ITEM:
-      const itemIndex = state.items.findIndex(item => item.Id === action.payload.id);
+      const itemIndex = state.items.findIndex(item => item.Id === action.payload.Id);
       if (itemIndex >= 0) {
         const updatedItems = [...state.items];
         const oldItem = updatedItems[itemIndex];
-        const updatedItem = { ...oldItem, quantity: action.payload.quantity };
+        const updatedItem = { ...oldItem, Quantity: action.payload.Quantity };
         updatedItems[itemIndex] = updatedItem;
 
         const updatedTotalAmount = state.totalAmount - (oldItem.Price * oldItem.Quantity) + (updatedItem.Price * updatedItem.Quantity);

@@ -3,6 +3,9 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/redux/rootReducers'; // Asegúrate de que la ruta es correcta
 import { CartItem } from '@/redux/cart/cartTypes'; // Asegúrate de que la ruta es correcta
+import { findProductById } from "@/constants/products";
+import Card from '@/components/Cart/Card';
+
 
 const ShoppingCart: React.FC = () => {
   // Usa useSelector para obtener el estado del carrito
@@ -17,12 +20,7 @@ const ShoppingCart: React.FC = () => {
       ) : (
         <ul>
           {cartItems.map((item: CartItem) => (
-            <li key={item.Id} style={{ marginBottom: '10px' }}>
-              <div>
-                <strong>{item.ProductName}</strong> - {item.Quantity} x ${item.Price.toFixed(2)}
-              </div>
-              <div>Total: ${(item.Quantity * item.Price).toFixed(2)}</div>
-            </li>
+            <Card Id={item.Id} ProductName={item.ProductName} Price={item.Price} Quantity={item.Quantity} />
           ))}
         </ul>
       )}

@@ -11,14 +11,14 @@ export const addToCart = (item: CartItem): AddToCartAction => ({
   payload: item,
 });
 
-export const removeFromCart = (id: string): RemoveFromCartAction => ({
+export const removeFromCart = (Id: number): RemoveFromCartAction => ({
   type: REMOVE_FROM_CART,
-  payload: { id },
+  payload: { Id },
 });
 
-export const updateCartItem = (id: string, quantity: number): UpdateCartItemAction => ({
+export const updateCartItem = (Id: number, Quantity: number): UpdateCartItemAction => ({
   type: UPDATE_CART_ITEM,
-  payload: { id, quantity },
+  payload: { Id, Quantity },
 });
 
 export const clearCart = (): ClearCartAction => ({

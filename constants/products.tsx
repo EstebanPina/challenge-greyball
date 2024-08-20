@@ -1,4 +1,14 @@
-export const product_list=[
+type Product = {
+    Id: number;
+    ProductName: string;
+    Currency: string;
+    Price: number;
+    Description: string;
+    Img: string;
+    Rating_Value: number;
+};
+
+export const product_list:Product[]=[
   {
       Id: 1,
       ProductName: "Apple iPhone 13",
@@ -41,7 +51,7 @@ export const product_list=[
       Currency: "GBP",
       Price: 250,
       Description: "Cartridge-free printer with high-capacity ink tanks.",
-      Img: "",
+      Img: "https://i.imgur.com/8G536Cm.jpeg",
       Rating_Value: 4.3
   },
   {
@@ -50,7 +60,7 @@ export const product_list=[
       Currency: "GBP",
       Price: 140,
       Description: "Stylish and durable men's watch with a bold design.",
-      Img: "",
+      Img: "https://i.imgur.com/lUHFD9j.jpeg",
       Rating_Value: 4.7
   },
   {
@@ -59,7 +69,7 @@ export const product_list=[
       Currency: "EUR",
       Price: 230,
       Description: "Smart display with Google Assistant and a 10-inch screen.",
-      Img: "",
+      Img: "https://i.imgur.com/lMQXjV7.jpeg",
       Rating_Value: 4.6
   },
   {
@@ -68,7 +78,7 @@ export const product_list=[
       Currency: "EUR",
       Price: 1200,
       Description: "2-in-1 laptop with a 4K touch display and powerful performance.",
-      Img: "",
+      Img: "https://i.imgur.com/34sLH6z.jpeg",
       Rating_Value: 4.8
   },
   {
@@ -77,7 +87,7 @@ export const product_list=[
       Currency: "EUR",
       Price: 100,
       Description: "Multifunctional pressure cooker that can sauté, steam, and more.",
-      Img: "",
+      Img: "https://i.imgur.com/uBdkH5Z.jpeg",
       Rating_Value: 4.7
   },
   {
@@ -86,7 +96,7 @@ export const product_list=[
       Currency: "MXN",
       Price: 2400,
       Description: "Portable Bluetooth speaker with powerful sound.",
-      Img: "",
+      Img: "https://i.imgur.com/fFNY95e.jpeg",
       Rating_Value: 4.6
   },
   {
@@ -95,7 +105,7 @@ export const product_list=[
       Currency: "MXN",
       Price: 8600,
       Description: "Iconic stand mixer with 10 speeds and multiple attachments.",
-      Img: "",
+      Img: "https://i.imgur.com/iJC1Y9S.png",
       Rating_Value: 4.9
   },
   {
@@ -104,7 +114,7 @@ export const product_list=[
       Currency: "MXN",
       Price: 2000,
       Description: "Advanced wireless mouse with precision control.",
-      Img: "",
+      Img: "https://i.imgur.com/GscCtxZ.jpeg",
       Rating_Value: 4.8
   },
   {
@@ -113,7 +123,7 @@ export const product_list=[
       Currency: "JPY",
       Price: 98000,
       Description: "Versatile 2-in-1 tablet with a powerful Intel Core processor.",
-      Img: "",
+      Img: "https://i.imgur.com/FsbNF46.jpeg",
       Rating_Value: 4.7
   },
   {
@@ -122,7 +132,7 @@ export const product_list=[
       Currency: "JPY",
       Price: 39000,
       Description: "Hybrid gaming console for home and portable play.",
-      Img: "",
+      Img: "https://i.imgur.com/qQGgMBK.jpeg",
       Rating_Value: 4.8
   },
   {
@@ -131,7 +141,7 @@ export const product_list=[
       Currency: "JPY",
       Price: 52000,
       Description: "All-in-one VR headset with a high-resolution display.",
-      Img: "",
+      Img: "https://i.imgur.com/U1nAXT6.jpeg",
       Rating_Value: 4.7
   },
   {
@@ -140,7 +150,7 @@ export const product_list=[
       Currency: "EUR",
       Price: 80,
       Description: "Smart LED bulbs with customizable lighting options.",
-      Img: "",
+      Img: "https://i.imgur.com/CWLBpXt.jpeg",
       Rating_Value: 4.5
   },
   {
@@ -149,7 +159,7 @@ export const product_list=[
       Currency: "GBP",
       Price: 500,
       Description: "High-performance NAS with multimedia support.",
-      Img: "",
+      Img: "https://i.imgur.com/3tzyeB9.jpeg",
       Rating_Value: 4.7
   },
   {
@@ -158,7 +168,7 @@ export const product_list=[
       Currency: "USD",
       Price: 50,
       Description: "Portable streaming player with 4K resolution support.",
-      Img: "",
+      Img: "https://i.imgur.com/iSfLxt5.jpeg",
       Rating_Value: 4.6
   },
   {
@@ -167,7 +177,7 @@ export const product_list=[
       Currency: "USD",
       Price: 800,
       Description: "Flagship smartphone with a stunning display and powerful camera.",
-      Img: "",
+      Img: "https://i.imgur.com/ddxtghM.jpeg",
       Rating_Value: 4.8
   },
   {
@@ -176,7 +186,7 @@ export const product_list=[
       Currency: "JPY",
       Price: 90000,
       Description: "Ultra HD Smart TV with vibrant colors and HDR support.",
-      Img: "",
+      Img: "https://i.imgur.com/pO4a596.jpeg",
       Rating_Value: 4.7
   },
   {
@@ -185,7 +195,7 @@ export const product_list=[
       Currency: "EUR",
       Price: 150,
       Description: "Waterproof Bluetooth speaker with 360° sound.",
-      Img: "",
+      Img: "https://i.imgur.com/CYRfihZ.jpeg",
       Rating_Value: 4.7
   },
   {
@@ -194,7 +204,7 @@ export const product_list=[
       Currency: "MXN",
       Price: 7500,
       Description: "High-performance blender with variable speed control.",
-      Img: "",
+      Img: "https://i.imgur.com/EqlYG1G.jpeg",
       Rating_Value: 4.8
   },
   {
@@ -203,34 +213,47 @@ export const product_list=[
       Currency: "GBP",
       Price: 120,
       Description: "Portable external hard drive with ample storage.",
-      Img: "",
+      Img: "https://i.imgur.com/7nSiXr3.jpeg",
       Rating_Value: 4.7
   },
   {
       Id: 24,
       ProductName: "Xiaomi Mi Smart Band 6",
       Currency: "JPY",
-      Price: 5000,
+      Price: 30,
       Description: "Affordable fitness tracker with SpO2 tracking.",
-      Img: "",
+      Img: "https://i.imgur.com/sA3na47.jpeg",
       Rating_Value: 4.6
   },
   {
       Id: 25,
       ProductName: "Yamaha YAS-209 Sound Bar",
       Currency: "JPY",
-      Price: 45000,
+      Price: 120,
       Description: "Soundbar with built-in Alexa and wireless subwoofer.",
-      Img: "",
+      Img: "https://i.imgur.com/qDee1I5.jpeg",
       Rating_Value: 4.7
   },
   {
       Id: 26,
       ProductName: "Zojirushi Neuro Fuzzy Rice Cooker",
       Currency: "JPY",
-      Price: 24000,
+      Price: 200,
       Description: "Advanced rice cooker with multiple cooking settings.",
-      Img: "",
+      Img: "https://i.imgur.com/wJIwfyc.jpeg",
       Rating_Value: 4.8
   }
 ]
+
+export function findProductById(productId: number): Product | string {
+    const product = product_list.find(product => product.Id === productId);
+    return product ? product : "Product not found.";
+}
+
+export function findProductByProductName(productName: string): Product[] {
+    const normalizedSearchText = productName.toLowerCase();
+    const matchingProducts = product_list.filter(product => 
+        product.ProductName.toLowerCase().includes(normalizedSearchText)
+    );
+    return matchingProducts.length > 0 ? matchingProducts : ["Product not found."] as unknown as Product[];
+}

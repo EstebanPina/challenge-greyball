@@ -19,12 +19,12 @@ export interface AddToCartAction {
 
 export interface RemoveFromCartAction {
   type: typeof REMOVE_FROM_CART;
-  payload: { id: string };
+  payload: { Id: number };
 }
 
 export interface UpdateCartItemAction {
   type: typeof UPDATE_CART_ITEM;
-  payload: { id: string; quantity: number };
+  payload: { Id: number; Quantity: number };
 }
 
 export interface ClearCartAction {
