@@ -20,7 +20,7 @@ const ShoppingCart: React.FC = () => {
       ) : (
         <ul>
           {cartItems.map((item: CartItem) => (
-            <Card Id={item.Id} ProductName={item.ProductName} Price={item.Price} Quantity={item.Quantity} />
+            <Card key={Id} Id={item.Id} ProductName={item.ProductName} Price={item.Price} Quantity={item.Quantity} />
           ))}
         </ul>
       )}
