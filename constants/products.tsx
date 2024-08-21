@@ -244,10 +244,19 @@ export const product_list:Product[]=[
       Rating_Value: 4.8
   }
 ]
+const productBase:Product=  {
+    Id: 0,
+    ProductName: "",
+    Currency: "USD",
+    Price: 0,
+    Description: "",
+    Img: "",
+    Rating_Value: 0
+}
 
-export function findProductById(productId: number): Product | string {
+export function findProductById(productId: number): Product {
     const product = product_list.find(product => product.Id === productId);
-    return product ? product : "Product not found.";
+    return product ? product : productBase;
 }
 
 export function findProductByProductName(productName: string): Product[] {

@@ -11,7 +11,7 @@ interface ProductProps {
   Quantity:number;
 }
 const QuantityHandler : React.FC<ProductProps> = ({ Id, ProductName, Price, Quantity }) => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<any>();
   const handleAddToCart = () => {
     const item: CartItem = {
       Id,

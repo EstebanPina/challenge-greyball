@@ -8,6 +8,15 @@ type ProductProps = {
   Price:number;
   Quantity:number;
 };
+type Product={
+  Id:number,
+  ProductName:string,
+  Currency:string,
+  Price:number,
+  Description:string,
+  Img:string,
+  Rating_Value:number
+}
 
 const Card : React.FC<ProductProps> = ({ Id, ProductName, Price, Quantity }) =>  {
   const product=findProductById(Id)

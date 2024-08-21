@@ -2,7 +2,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
 import { addToCart } from '@/redux/cart/cartActions'; // Asegúrate de que la ruta sea correcta
-import { CartItem } from '@/redux/cart/cartTypes';
+import { AddToCartAction, CartItem } from '@/redux/cart/cartTypes';
 import Swal from 'sweetalert2';
 interface ProductProps {
   Id: number;
@@ -10,7 +10,7 @@ interface ProductProps {
   Price: number;
 }
 const Button_Buy : React.FC<ProductProps> = ({ Id, ProductName, Price }) => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<any>();
   const Toast = Swal.mixin({
     toast: true,
     position: "top-end",
